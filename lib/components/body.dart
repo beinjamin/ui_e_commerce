@@ -10,6 +10,16 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      children: <Widget>[
+        Expanded(
+          flex: 3,
+          child: Column(
+            children: <Widget>[],
+          ),
+        ),
+        Expanded(flex: 2, child: SizedBox()),
+      ],
+    );
   }
 }
