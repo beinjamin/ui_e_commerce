@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_e_commerce/size_config.dart';
 
 class Body extends StatefulWidget {
   Body({Key? key}) : super(key: key);
@@ -15,7 +16,12 @@ class _BodyState extends State<Body> {
         Expanded(
           flex: 3,
           child: Column(
-            children: <Widget>[],
+            children: <Widget>[
+              Text(
+                "Jaures.E-Commerce",
+                style: TextStyle(fontSize: getProportionateScreenWidth(36)),
+              )
+            ],
           ),
         ),
         Expanded(flex: 2, child: SizedBox()),
