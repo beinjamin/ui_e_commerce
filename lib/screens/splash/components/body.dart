@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'package:ui_e_commerce/constants.dart';
 import 'package:ui_e_commerce/size_config.dart';
+
+import 'package:ui_e_commerce/screens/splash/components/body.dart';
 
 class Body extends StatefulWidget {
   Body({Key? key}) : super(key: key);
@@ -39,7 +40,7 @@ class _BodyState extends State<Body> {
                 itemCount: splashData.length,
                 itemBuilder: (context, index) => SplashContent(
                   image: splashData[index]["image"],
-                  text: 'Bienvenu Chez Pavel Shop',
+                  text: splashData[index]['text'],
                 ),
               ),
             ),
@@ -54,8 +55,8 @@ class _BodyState extends State<Body> {
 class SplashContent extends StatelessWidget {
   const SplashContent({
     Key? key,
-    required this.image,
     required this.text,
+    required this.image,
   }) : super(key: key);
   final String text, image;
   @override
